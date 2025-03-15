@@ -9,6 +9,9 @@ export default defineConfig((config) => {
   return {
     build: {
       target: 'esnext',
+      rollupOptions: {
+        external: ['@remix-run/cloudflare-pages'], // Mark as external
+      },
     },
     plugins: [
       nodePolyfills({
